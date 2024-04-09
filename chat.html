@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&family=Protest+Riot&family=Protest+Strike&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Fira+Sans+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Sen:wght@400..800&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font: bold 25px Arial, Helvetica, sans-serif;
+            transition: all 0.4s ease;
+            
+             
+            
+
+        }
+
+        section {
+            min-height: 100vh;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            background-image: url('./images/15517774_5626873.jpg');
+            background-size: cover;
+        }
+
+        section.dark {
+            background-size: cover;
+        }
+
+        .info-box {
+            letter-spacing: 4px;
+            padding: 10px;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        section.dark .info-box{
+            color: #fff;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            max-width: 560px;
+            width: 100%;
+           
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+            background-size: cover;
+            position: relative;
+            height: 250px;
+             background: url("https://i.pinimg.com/originals/c8/ba/30/c8ba30ee61944cc26dbde4022a0a4b72.gif") 0 0 no-repeat;
+  background-size: 2400%;
+  animation: anim-ss steps(50) 10s infinite;
+  border: none  !important;
+  transition: all 0.8s ease;
+            
+ 
+}
+@keyframes anim-ss { 0% {background-position: 0%;} 100% {background-position: 100%;} }
+        
+
+        section.dark .container {
+            background-size: cover;
+            background-image: url('');
+         background: url("https://i.pinimg.com/originals/c1/a8/63/c1a8635c4e71648481511558ffd44ff3.gif") 0 0 no-repeat;
+  background-size: 2400%;
+  animation: anim-ss steps(50) 10s infinite;
+}
+@keyframes anim-ss { 0% {background-position: 0%;} 100% {background-position: 100%;} }
+
+        section .container .icons i {
+            position: absolute;
+            right: 17px;
+            top: 17px;
+            height: 30px;
+            width: 30px;
+            
+            color:black;
+            text-align: center;
+            line-height: 30px;
+            font-size: 20px;
+            cursor: pointer;
+        }
+
+        section.dark .container .icons i {
+          
+            color:white;
+        }
+
+        .container .icons i.fa-sun {
+            opacity: 0;
+            pointer-events: auto;
+            font-size: 20px;
+        }
+section.dark .am_pm{
+    color: white;
+}
+        section.dark .container .icons i.fa-sun {
+            opacity: 1;
+            pointer-events: none;
+        }
+
+        section .container .time {
+            display: flex;
+            align-items: center;
+        }
+
+        .container .time .time_colon {
+            display: flex;
+            align-items: center;
+            position: relative;
+        }
+
+        .time .time_colon .am_pm {
+            position: absolute;
+            top: 0;
+            right: -50px;
+            font-size: 20px;
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
+        
+
+        @media screen and (max-width: 480px) {
+            .time .time_colon .am_pm {
+                position: absolute;
+                top: 0;
+                right: 27px;
+                top: 110px;
+            }
+        }
+
+        .time .time_colon .time_text {
+            height: 100px;
+            width: 100px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            background-image: url('./images/white-cloud-blue-sky.jpg');
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+            border-radius: 6px;
+            font-weight: 600;
+            font-size: 35px;
+        }
+
+        section.dark .time .time_colon .time_text {
+           background-image: url('https://t4.ftcdn.net/jpg/01/90/74/63/360_F_190746317_qjZikoohn97kiJrWpJZJLHilBXKVWTAD.jpg');
+
+        
+        }
+
+
+
+
+        section.dark .time .time_text .num,
+        section.dark .time .time_colon .colon {
+            color: #fff;
+        }
+
+        .time .time_colon .colon {
+            font-size: 40px;
+            margin: 0 10px;
+            font-weight: 600;
+        }
+
+        section.dark .time .time_colon .colon {
+            color: #fff;
+        }
+
+        .time .time_colon .time_text .text {
+            font-size: 15px;
+            font-weight: 700;
+            letter-spacing: 2px;
+        }
+
+        section.dark .time .time_colon .text {
+            color: #fff;
+        }
+    </style>
+    <title>Digital clock</title>
+</head>
+<body>
+    <section>
+        <div class="container">
+            <div class="info-box">
+                <b id="dayOfWeek"></b>
+                <span id="date"></span>
+            </div>
+            <div class="icons">
+                <i class="fas fa-moon" ></i>
+                <i class="fas fa-sun"></i>
+            </div>
+            <div class="time">
+                <div class="time_colon">
+                    <div class="time_text">
+                        <span class="num hour_num">08</span>
+                    </div>
+                    <span class="colon">:</span>
+                </div>
+                <div class="time_colon">
+                    <div class="time_text">
+                        <span class="num min_num">12</span>
+                    </div>
+                    <span class="colon">:</span>
+                </div>
+                <div class="time_colon">
+                    <div class="time_text">
+                        <span class="num sec_num">45</span>
+                    </div>
+                    <span class="am_pm">AM</span>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script>
+        let section = document.querySelector('section');
+        let icons = document.querySelector('.icons');
+        icons.onclick = () => {
+            section.classList.toggle("dark");
+        };
+
+        setInterval(() => {
+            let date = new Date(),
+                hour = date.getHours(),
+                min = date.getMinutes(),
+                sec = date.getSeconds(),
+                day = date.getDate(),
+                monthIndex = date.getMonth(),
+                year = date.getFullYear(),
+                days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+                months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"],
+                dayOfWeek = days[date.getDay()],
+                monthName = months[monthIndex];
+
+            let d;
+            d = hour < 12 ? "AM" : "PM";
+            hour = hour > 12 ? hour - 12 : hour;
+            hour = hour == 0 ? hour = 12 : hour;
+
+            document.querySelector(".hour_num").innerText = hour;
+            document.querySelector(".min_num").innerText = min;
+            document.querySelector(".sec_num").innerText = sec;
+            document.querySelector(".am_pm").innerText = d;
+            document.getElementById("dayOfWeek").innerText = dayOfWeek;
+            document.getElementById("date").innerText = `${day} ${monthName} ${year}`;
+          
+        }, 1000);
+    </script>
+</body>
+</html>
